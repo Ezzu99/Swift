@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:myid/pages/profileScr.dart';
-import 'package:myid/pages/loginPage.dart';
-import 'package:myid/pages/marksScr.dart';
-import 'package:myid/pages/attendanceScr.dart';
-import 'package:myid/pages/loadingScr.dart';
-import 'package:myid/pages/home.dart';
+import 'package:miimarks/Pages/settingsScr.dart';
+import 'package:miimarks/pages/loginPage.dart';
+import 'package:miimarks/pages/marksScr.dart';
+import 'package:miimarks/pages/attendanceScr.dart';
+import 'package:miimarks/pages/loadingScr.dart';
+import 'package:miimarks/pages/home.dart';
 
 void main() => runApp(MaterialApp(
-  title: 'Flex',
+  debugShowCheckedModeBanner: false,
+  title: 'Swift',
   initialRoute: '/login',
   routes: {
     '/login': (context) => LoginPage(),
     '/home': (context) => Home(),
-    '/stuProfile': (context) => StuProfile(),
+    '/settingsScr': (context) => SettingsScr(),
     '/marks': (context) => Marks(),
     '/attendance': (context) => Attendance(),
     '/loading': (context) => Loading(),
   },
 ));
 
+// This is code on my branch :login-system
 

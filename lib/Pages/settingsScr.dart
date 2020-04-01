@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:myid/CustomWidgets/subjectWidget.dart';
+import 'package:miimarks/widgets/semesterDrawer.dart';
 
-class Attendance extends StatefulWidget {
+class SettingsScr extends StatefulWidget {
   @override
-  _AttendanceState createState() => _AttendanceState();
+  _SettingsScrState createState() => _SettingsScrState();
 }
 
-class _AttendanceState extends State<Attendance> {
+class _SettingsScrState extends State<SettingsScr> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[900],
       appBar: AppBar(
         title: Text(
-          'Attendance',
+          'Settings',
           style: TextStyle(
             color: Colors.grey[400],
           ),
@@ -22,7 +22,6 @@ class _AttendanceState extends State<Attendance> {
         backgroundColor: Colors.grey[850],
         elevation: 5.0,
       ),
-      body: SubjectWidget(),
     );
   }
 }
