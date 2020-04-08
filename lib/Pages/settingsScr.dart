@@ -9,18 +9,21 @@ class SettingsScr extends StatefulWidget {
 class _SettingsScrState extends State<SettingsScr> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.grey[900],
-      appBar: AppBar(
-        title: Text(
-          'Settings',
-          style: TextStyle(
-            color: Colors.grey[400],
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.grey[900],
+        appBar: AppBar(
+          title: Text(
+            'Settings',
+            style: TextStyle(
+              color: Colors.grey[400],
+            ),
           ),
+          centerTitle: true,
+          backgroundColor: Colors.grey[850],
+          elevation: 5.0,
         ),
-        centerTitle: true,
-        backgroundColor: Colors.grey[850],
-        elevation: 5.0,
+        endDrawer: SemesterDrawer(title: 'Choose Semester',),
       ),
     );
   }
