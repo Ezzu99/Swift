@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:miimarks/widgets/semesterDrawer.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -192,57 +191,6 @@ class _HomeState extends State<Home> {
               ),
             ),
           ),
-          // Padding(
-//        padding: const EdgeInsets.fromLTRB(70, 200, 70, 200),
-//        child: Material(
-//          elevation: 5,
-//          borderRadius: BorderRadius.all(Radius.circular(10)),
-//          color: Colors.grey[850],
-//          child: Center(
-//            child: Padding(
-//              padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-//              child: Container(
-//                child: Column(
-//                  crossAxisAlignment: CrossAxisAlignment.stretch,
-//                  mainAxisAlignment: MainAxisAlignment.center,
-//                  children: <Widget>[
-//                    RaisedButton.icon(
-//                      elevation: 5,
-//                      onPressed: () {
-//                        Navigator.pushNamed(context, '/stuProfile');
-//                      },
-//                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
-//                      icon: Icon(Icons.account_circle, color: Colors.grey[400],),
-//                      label: Text('Student Profile', style: TextStyle(color: Colors.grey[400]),),
-//                      color: Colors.grey[800],
-//                    ),
-//                    RaisedButton.icon(
-//                      elevation: 5,
-//                      onPressed: () {
-//                        Navigator.pushNamed(context, '/marks', arguments: dataStr);
-//                      },
-//                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
-//                      icon: Icon(Icons.assignment, color: Colors.grey[400],),
-//                      label: Text('Marks', style: TextStyle(color: Colors.grey[400]),),
-//                      color: Colors.grey[800],
-//                    ),
-//                    RaisedButton.icon(
-//                      elevation: 5,
-//                      onPressed: () {
-//                        Navigator.pushNamed(context, '/attendance');
-//                      },
-//                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
-//                      icon: Icon(Icons.content_paste, color: Colors.grey[400],),
-//                      label: Text('Attendance', style: TextStyle(color: Colors.grey[400]),),
-//                      color: Colors.grey[800],
-//                    ),
-//                  ],
-//                ),
-//              ),
-//            ),
-//          ),
-//        ),
-//      ),
           floatingActionButton: FloatingActionButton(
             elevation: 0,
             child: Icon(Icons.power_settings_new),
@@ -332,6 +280,7 @@ class _HomeState extends State<Home> {
                           onPressed: () {
                             setState(() {
                               currentTab = 2;
+                              Navigator.pushNamed(context, '/email');
                             });
                           },
                           child: Column(

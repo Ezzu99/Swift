@@ -1,20 +1,33 @@
 import 'package:flutter/material.dart';
 
-class SubjectWidget extends StatelessWidget {
+class SubjectWidget extends StatefulWidget {
   final List<String> courses;
   SubjectWidget(this.courses);
+
+  @override
+  _SubjectWidgetState createState() => _SubjectWidgetState();
+}
+
+class _SubjectWidgetState extends State<SubjectWidget> {
+
+  var color1 = Colors.grey[600];
+  var color2 = Colors.grey[200];
 
   Widget courseContainer(String course, [bool isLast=false]) {
     return InkWell(
       onTap: () {
         print('$course');
+        setState(() {
+          color1 = Colors.blue;
+          color2 = Colors.blue[200];
+        });
       },
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 4),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(10)),
           gradient: LinearGradient(
-            colors: [Colors.blue, Colors.blue[200]],
+            colors: [color1, color2],
           )
         ),
         child: Center(
@@ -44,10 +57,10 @@ class SubjectWidget extends StatelessWidget {
               pageSnapping: true,
               itemBuilder: (context, index) {
                 return ListView(
-                  children: <Widget>[this.courseContainer(courses[index])]
+                  children: <Widget>[this.courseContainer(widget.courses[index])]
                 );
               },
-              itemCount: courses.length,
+              itemCount: widget.courses.length,
             ),
         ),
         Container(

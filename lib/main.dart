@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:miimarks/Pages/email.dart';
 import 'package:miimarks/Pages/settingsScr.dart';
 import 'package:miimarks/pages/loginPage.dart';
 import 'package:miimarks/pages/marksScr.dart';
@@ -15,6 +16,7 @@ void main() => runApp(MaterialApp(
     '/home': (context) => Home(),
     '/settingsScr': (context) => SettingsScr(),
     '/marks': (context) => Marks(),
+    '/email': (context) => Email(),
     '/attendance': (context) => Attendance(),
     '/loading': (context) => Loading(),
   },

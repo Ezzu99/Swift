@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:miimarks/widgets/courses.dart';
 import 'package:miimarks/widgets/charts.dart';
-import 'package:miimarks/widgets/semesterDrawer.dart';
 
 // stateful widget members need to be final,
 
